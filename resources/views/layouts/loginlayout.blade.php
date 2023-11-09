@@ -9,32 +9,18 @@
     <!-- Begin SEO tag -->
     <title> Sign In | Atipsom </title>
     <meta property="og:title" content="Sign In">
-    <meta name="author" content="Beni Arisandi">
+    <meta name="author" content="content oasis">
     <meta property="og:locale" content="en_US">
-    <meta name="description" content="Responsive admin theme build on top of Bootstrap 4">
-    <meta property="og:description" content="Responsive admin theme build on top of Bootstrap 4">
+    <meta name="description" content="Atipsom software">
+    <meta property="og:description" content="Atipsom software">
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
-    <meta property="og:site_name" content="Looper - Bootstrap 4 Admin Theme">
-    <script type="application/ld+json">
-      {
-        "name": "Looper - Bootstrap 4 Admin Theme",
-        "description": "Responsive admin theme build on top of Bootstrap 4",
-        "author":
-        {
-          "@type": "Person",
-          "name": "Beni Arisandi"
-        },
-        "@type": "WebSite",
-        "url": "",
-        "headline": "Sign In",
-        "@context": "http://schema.org"
-      }
-    </script><!-- End SEO tag -->
+    <meta property="og:site_name" content="Atipsom - software ">
+    <!-- End SEO tag -->
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-touch-icon.png">
     <link rel="shortcut icon" href="assets/favicon.ico">
-    <meta name="theme-color" content="green"><!-- Google font -->
+    <meta name="theme-color" content="#f4f4f4"><!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet"><!-- End GOOGLE FONT -->
     <!-- BEGIN PLUGINS STYLES -->
     <link rel="stylesheet" href="{{url('assets/vendor/open-iconic/font/css/open-iconic-bootstrap.min.css')}}">

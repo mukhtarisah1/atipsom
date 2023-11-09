@@ -4,6 +4,9 @@ use App\Http\Controllers\FacilitatorsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\TrafficInpersonController;
+use App\Http\Controllers\ShelterStaffController;
+use App\Http\Controllers\InfoSomController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,3 +45,25 @@ Route::delete('/facilitators/{id}', [FacilitatorsController::class, 'destroy'])-
 
 //search
 //Route::get('/victim-search', 'SearchController@search')->name('victim-search.victim');
+
+
+
+// List all staff members
+Route::get('shelterstaff', [ShelterStaffController::class, 'index'])->name('shelterstaff.index');
+
+// Show the create staff member form
+Route::get('shelterstaff/create', [ShelterStaffController::class, 'create'])->name('shelterstaff.create');
+Route::post('shelterstaff', [ShelterStaffController::class, 'store'])->name('shelterstaff.store');
+Route::get('shelterstaff/{shelterstaff}', [ShelterStaffController::class, 'show'])->name('shelterstaff.show');
+Route::get('shelterstaff/{shelterstaff}/edit', [ShelterStaffController::class, 'edit'])->name('shelterstaff.edit');
+Route::put('shelterstaff/{shelterstaff}', [ShelterStaffController::class, 'update'])->name('shelterstaff.update');
+Route::delete('shelterstaff/{shelterstaff}', [ShelterStaffController::class, 'destroy'])->name('shelterstaff.destroy');
+
+
+Route::get('/info-soms', [InfoSomController::class, 'index'])->name('info-soms.index');
+Route::get('/info-soms/create', [InfoSomController::class, 'create'])->name('info-soms.create');
+Route::post('/info-soms', [InfoSomController::class, 'store'])->name('info-soms.store');
+Route::get('/info-soms/{id}', [InfoSomController::class, 'show'])->name('info-soms.show');
+Route::get('/info-soms/{id}/edit', [InfoSomController::class, 'edit'])->name('info-soms.edit');
+Route::put('/info-soms/{id}', [InfoSomController::class, 'update'])->name('info-soms.update');
+Route::delete('/info-soms/{id}', [InfoSomController::class, 'destroy'])->name('info-soms.destroy');

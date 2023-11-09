@@ -32,7 +32,7 @@
             <!-- metric column -->
             <div class="col">
                 <!-- .metric -->
-                <a href="user-tasks.html" class="metric metric-bordered align-items-center">
+                <a href="/info-soms" class="metric metric-bordered align-items-center">
                 <h2 class="metric-label"> Manage Shelters </h2>
                 <p class="metric-value h3">
                     <sub><i class="fa fa-tasks"></i></sub> <span class="value">64</span>
