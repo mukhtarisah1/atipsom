@@ -24,7 +24,7 @@ return new class extends Migration
             $table->integer('number_of_seats');
             $table->integer('vacancies');
             $table->integer('capacity');
-            $table->string('Additional_information');
+            $table->string('any_other_info');
 
             $table->timestamps();
         });

@@ -1,13 +1,34 @@
 @extends('layouts.loginlayout')
   
 @section('content')
+<style>
+  .image-container {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+  @media (max-width: 768px) {
+    .image-container {
+      height: 80px; /* Adjust the container height for smaller screens */
+    }
+  }
+</style>
+
 <main class="auth">
-      <header id="auth-header" class="auth-header" style="background-color: green;">
+<div class="image-container">
+  <img src="assets/ATIPSOMLogin.jpeg" alt="">
+</div>
+      <header>
+     
         
-           <h1><img src="assets/banner.jpeg" alt=""></h1>
-        
-        <!-- <p> Don't have a account? <a href="auth-signup.html">Create One</a>
-        </p> -->
       </header><!-- form -->
       <form class="auth-form" method="POST" action="{{ route('login') }}">
         @csrf
@@ -51,7 +72,7 @@
         </div><!-- /recovery links -->
       </form><!-- /.auth-form -->
       <!-- copyright -->
-      <footer class="auth-footer"> © 2023 All Rights Reserved. <a href="#">Privacy</a> and <a href="#">Terms</a>
+      <footer class="auth-footer"> © 2023 All Rights Reserved.
       </footer>
     </main><!-- /.auth -->
 @endsection

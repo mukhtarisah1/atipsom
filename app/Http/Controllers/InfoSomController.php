@@ -8,9 +8,27 @@ use App\Models\ShelterStaff;
 
 class InfoSomController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $infoSoms = InfoSom::all();
+        $query = InfoSom::query(); // Replace 'User' with the appropriate model name
+
+    $searchableFields = ['namager_name', 'email', 'facility']; // Add more fields as needed
+
+    foreach ($searchableFields as $field) {
+        $value = $request->input('name');
+        //dd($value);
+        if ($value){
+            // Split the input by commas and trim whitespace
+            $values = array_map('trim', explode(',', $value));
+            
+            $query->orWhere(function ($query) use ($field, $values) {
+                foreach ($values as $singleValue) {
+                    $query->orWhere($field, 'like', '%' . $singleValue . '%');
+                }
+            });
+        }
+    }   
+        $infoSoms = $query->get();
         return view('info-soms.index', compact('infoSoms'));
     }
 
@@ -70,30 +88,29 @@ class InfoSomController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->validate([
-            'surname' => 'required|string',
-            'given_name' => 'required|string',
-            'date_of_birth' => 'required|date',
-            'sex' => 'required|string',
-            'nin' => 'required|string',
+            'manager_name' => 'required|string',
+            'email' => 'required|email',
             'phone' => 'required|string',
-            'passport' => 'required|integer',
-            'nationality' => 'required|string',
-            'state' => 'required|string',
-            'lga' => 'required|string',
-            'town' => 'required|string',
-            'present_address' => 'required|string',
-            'last_address' => 'required|string',
-            'tribal_mark' => 'required|string',
-            'language_spoken' => 'required|string',
-            'current_location' => 'required|string',
-            'photograph' => 'mimes:jpeg,png,jpg,gif|max:2048',
-            'shelter' => 'required|string', 
-            'Additional_information' => 'string', // Define the validation rule for 'Additional_information'
+            'address' => 'required|string',
+            'facilities' => 'required|string',
+            'photograph' => 'image|mimes:jpeg,png,jpg,gif',
+            'number_of_seats' => 'required|integer',
+            'vacancies' => 'required',
+            'capacity' => 'required|integer',
+            'any_other_info' => 'string|nullable', // Define the validation rule for 'Additional_information'
         ]);
-
-        // Handle photograph update and storage here if needed
-
         $infoSom = InfoSom::find($id);
+        //dd($infoSom->photograph);
+        if ($request->hasFile('photograph')) {
+            $image = $request->file('photograph');
+            $imageName = time() . '.' . $image->extension();
+            $image->move(public_path('shelterImages'), $imageName);
+            $data['photograph'] = $imageName;
+        }else{
+            $data['photograph'] = $infoSom->photograph;
+        }
+
+        
         $infoSom->update($data);
 
         return redirect()->route('info-soms.index')->with('success', 'Record updated successfully');

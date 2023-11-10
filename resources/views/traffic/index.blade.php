@@ -1,6 +1,7 @@
 @extends('layouts.layout')
-
+@section('title', 'Trafficking victims Page')
 @section('content')
+
 <div> <a href="/traffic-in-person/create" class="btn btn-secondary mb-3">Create New Record</a></div>
 
 <div class="card card-fluid">
@@ -35,8 +36,9 @@
                       <!-- .table -->
                       <table class="table">
                         <!-- thead -->
-                        <thead>
+                        <thead style="background-color: green; color: #fff;">
                           <tr>
+                            <th>SN</th>
                             <th>Full Name</th>
                             <th> Gender </th>
                             <th> Date Of Birth </th>
@@ -51,7 +53,7 @@
                           <!-- tr -->
                           @foreach ($trafficPersons as $trafficPerson)
                             <tr>
-                                
+                                <td>{{ $loop->iteration }}</td>
                                 <td>
                                 <a href="{{ route('traffic-in-person.show', $trafficPerson->id) }}" class="tile tile-img mr-1"><img class="img-fluid" src="photographs/{{$trafficPerson->photograph}}" alt="Card image cap"></a> <a href="#">{{ $trafficPerson->surname }} {{ $trafficPerson->given_name }}</a>
                                 </td>

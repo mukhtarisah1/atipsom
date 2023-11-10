@@ -49,11 +49,7 @@
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="inputState" class="form-label">vacancies</label>
-                        <select id="inputState" name="vacancies" class="form-select custom-select" placeholder="1234 Main St">
-                        <option selected>Choose...</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                        </select>
+                        <input id="inputState" name="vacancies" class="form-control" value="{{old('vacancies')}}" placeholder="vacancies">
                         <p style="color:red">@error('vacancies') {{$message}} @endError</p>
                     </div>
                     

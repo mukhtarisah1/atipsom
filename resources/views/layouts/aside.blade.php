@@ -15,7 +15,7 @@
                   
                 </li><!-- /.menu-item -->
                 <li class="menu-item has-child">
-                  <a href="/info-soms" class="menu-link"><span class="menu-icon oi oi-person"></span> <span class="menu-text">Add Shelters</span> </a> <!-- child menu -->
+                  <a href="/info-soms/create" class="menu-link"><span class="menu-icon oi oi-browser"></span> <span class="menu-text">Add Shelters</span> </a> <!-- child menu -->
                   
                 </li><!-- /.menu-item -->
                 <li class="menu-item has-child">

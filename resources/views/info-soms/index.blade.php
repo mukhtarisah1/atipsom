@@ -1,10 +1,10 @@
 @extends('layouts.layout')
-
+@section('title', 'Shelter Information')
 @section('content')
     
     
 
-
+        
         <div> <a href="/info-soms/create" class="btn btn-secondary mb-3">Create New Record</a></div>
 
         <div class="card card-fluid">
@@ -13,7 +13,7 @@
                   <!-- .card-body -->
                   <div class="card-body">
                     <!-- .form-group -->
-                    <form action="{{ route('traffic-in-person.index') }}" method="GET">
+                    <form action="{{ route('info-soms.index') }}" method="GET">
                     <div class="form-group">
                       <!-- .input-group -->
                       <div class="input-group input-group-alt">
@@ -59,7 +59,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>
-                                <a href="{{ route('info-soms.show', $infoSom->id) }}" ></a> <a href="#"> {{ $infoSom->manager_name }}</a>
+                                <a href="#" >{{ $infoSom->manager_name }}</a>
                                 </td>
                                 <td class="align-middle"> {{ $infoSom->email }} </td>
                                 <td class="align-middle"> {{ $infoSom->facilities }} </td>

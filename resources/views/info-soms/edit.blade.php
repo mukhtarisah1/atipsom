@@ -1,9 +1,6 @@
 @extends('layouts.layout')
 
-@section('content')
-
-
-            
+@section('content')            
     
 @section('title', 'Edit Shelter')
         <div class="card">
@@ -11,6 +8,7 @@
             
                 <form class="row g-3" action="{{route('info-soms.update', $infoSom->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
+                    @method('put')
                     
                     <div class="col-12 form-group">
                         <label for="inputManagerName" class="form-label">Manager Name</label>
@@ -51,11 +49,9 @@
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="inputState" class="form-label">vacancies</label>
-                        <select id="inputState" name="vacancies" class="form-select custom-select" placeholder="1234 Main St">
-                        <option selected>Choose...</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                        </select>
+                        <input id="inputState" name="vacancies" class="form-control" value="{{$infoSom->vacancies}}" placeholder="vacancies">
+                       
+                        
                         <p style="color:red">@error('vacancies') {{$message}} @endError</p>
                     </div>
                     
