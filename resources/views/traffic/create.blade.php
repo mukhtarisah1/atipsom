@@ -27,35 +27,35 @@
                             </div>
 
                             <div class="form-group col-md-6">
-                            <label for="aliases">Aliases:</label>
-                            <input type="text" name="aliases" placeholder="Aliases" value="{{ old('aliases') }}" class="form-control">
-                            <p style="color:red">@error('aliases') {{$message}} @endError</p>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="date_of_birth">Date of Birth:</label>
-                            <input type="date"  placeholder="Date of Birth" name="date_of_birth" value="{{ old('date_of_birth') }}" class="form-control">
-                            <p style="color:red">@error('date_of_birth') {{$message}} @endError</p>
-                        </div>
+                                <label for="aliases">Aliases:</label>
+                                <input type="text" name="aliases" placeholder="Aliases" value="{{ old('aliases') }}" class="form-control">
+                                <p style="color:red">@error('aliases') {{$message}} @endError</p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="date_of_birth">Date of Birth:</label>
+                                <input type="date"  placeholder="Date of Birth" name="date_of_birth" value="{{ old('date_of_birth') }}" class="form-control">
+                                <p style="color:red">@error('date_of_birth') {{$message}} @endError</p>
+                            </div>
 
-                        <div class="form-group col-md-6">
-                            <label for="sex">Sex:</label>
-                            <div class="form-floating ">
-                            <select class="form-select form-control" name="sex" id="floatingSelect" aria-label="Floating label select example">
-                                <option value="0">choose</option>   
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                            </select>
-                            <p style="color:red">@error('sex') {{$message}} @endError</p>  
-                        </div>
-                        </div>
+                            <div class="form-group col-md-6">
+                                <label for="sex">Sex:</label>
+                                <div class="form-floating ">
+                                <select class="form-select form-control" name="sex" id="floatingSelect" aria-label="Floating label select example">
+                                    <option value="0">choose</option>   
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                </select>
+                                <p style="color:red">@error('sex') {{$message}} @endError</p>  
+                            </div>
+                            </div>
                         
                        
 
-                        <div class="form-group col-md-6">
-                            <label for="nin">NIN:</label>
-                            <input type="number"  placeholder="NIN" name="nin" class="form-control" value="{{ old('nin') }}">
-                            <p style="color:red">@error('nin') {{$message}} @endError</p>
-                        </div>
+                            <div class="form-group col-md-6">
+                                <label for="nin">NIN:</label>
+                                <input type="number"  placeholder="NIN" name="nin" class="form-control" value="{{ old('nin') }}">
+                                <p style="color:red">@error('nin') {{$message}} @endError</p>
+                            </div>
                         </div>
                         
                         <!-- Add more form fields for Step 1 here -->
