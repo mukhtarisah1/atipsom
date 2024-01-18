@@ -72,7 +72,7 @@
         </div><!-- /recovery links -->
       </form><!-- /.auth-form -->
       <!-- copyright -->
-      <footer class="auth-footer"> © 2023 All Rights Reserved.
+      <footer class="auth-footer"> © 2024 All Rights Reserved.
       </footer>
     </main><!-- /.auth -->
 @endsection
