@@ -24,7 +24,7 @@
             <th>Priority</th>
             <th>state</th>
             <th>Assigned to</th>
-            <th>Description</th>
+            
             <!-- Add other fields as needed -->
             <th>Actions</th>
         </tr>
@@ -38,16 +38,16 @@
                 <td>{{ $incident->priority }}</td>
                 <td>{{ $incident->state }}</td>
                 <td>{{ $incident->assigned_to }}</td>
-                <td>{{ $incident->description }}</td>
+                
                 
                 <!-- Add other fields as needed -->
                 <td>
                     <form action="{{ route('incidents.destroy', $incident->id) }}" method="POST">
                         <a href="{{ route('incidents.show', $incident->id) }}">Show</a>
-                        <a href="{{ route('incidents.edit', $incident->id) }}">Edit</a>
+                        <a href="{{ route('incidents.edit', $incident->id) }}"><i class="fa fa-pencil-alt"></i> <span class="sr-only">Edit</span></a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                        <button class="btn btn-sm btn-icon btn-secondary" onclick="return confirm('Are you sure you want to delete this record?')" type="submit"><i class="far fa-trash-alt"></i> <span class="sr-only">Remove</span></button>
                     </form>
                 </td>
             </tr>
