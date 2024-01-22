@@ -91,14 +91,7 @@
             <!-- .page-inner -->
             <div class="page-inner">
               <!-- .page-title-bar -->
-              <header class="page-title-bar">
-                <div class="d-flex flex-column flex-md-row">
-                  <p class="lead">
-                    <h3 class="font-weight-bold">@yield('title')</h3> 
-                  </p>
-                  
-                </div>
-              </header>
+              
               <!-- .page-section -->
 
               <div class="page-section">

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\TrafficInpersonController;
 use App\Http\Controllers\ShelterStaffController;
 use App\Http\Controllers\InfoSomController;
+use App\Http\Controllers\IncidentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +68,14 @@ Route::get('/info-soms/{id}', [InfoSomController::class, 'show'])->name('info-so
 Route::get('/info-soms/{id}/edit', [InfoSomController::class, 'edit'])->name('info-soms.edit');
 Route::put('/info-soms/{id}', [InfoSomController::class, 'update'])->name('info-soms.update');
 Route::delete('/info-soms/{id}', [InfoSomController::class, 'destroy'])->name('info-soms.destroy');
+
+
+
+// Incidents Routes
+Route::get('/incidents', [IncidentController::class, 'index'])->name('incidents.index');
+Route::get('/incidents/create', [IncidentController::class, 'create'])->name('incidents.create');
+Route::get('/incidents/{incident}', [IncidentController::class, 'show'])->name('incidents.show');
+Route::post('/incidents', [IncidentController::class, 'store'])->name('incidents.store');
+Route::get('/incidents/{incident}/edit', [IncidentController::class, 'edit'])->name('incidents.edit');
+Route::put('/incidents/{incident}', [IncidentController::class, 'update'])->name('incidents.update');
+Route::delete('/incidents/{incident}', [IncidentController::class, 'destroy'])->name('incidents.destroy');
