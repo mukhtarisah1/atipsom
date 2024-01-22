@@ -3,7 +3,7 @@
 
 @section('content')
     <div>
-        <a href="{{ route('incidents.create') }}">Create New Incident</a>
+        
     </div>
 
     @if ($message = Session::get('success'))
@@ -11,12 +11,20 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-
-    <table>
+<div class="card">
+    <div class="card-body">
+    <a href="{{ route('incidents.create') }}"><h6>Create New Incident</h6></a>
+    <table class="table table-striped table-hover table-bordered">
         <tr>
             <th>No</th>
             <th>Number</th>
             <th>Caller Name</th>
+            <th>Category</th>
+            <th>Opened</th>
+            <th>Priority</th>
+            <th>state</th>
+            <th>Assigned to</th>
+            <th>Description</th>
             <!-- Add other fields as needed -->
             <th>Actions</th>
         </tr>
@@ -25,6 +33,13 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $incident->number }}</td>
                 <td>{{ $incident->caller_name }}</td>
+                <td>{{ $incident->category }}</td>
+                <td>{{ $incident->opened }}</td>
+                <td>{{ $incident->priority }}</td>
+                <td>{{ $incident->state }}</td>
+                <td>{{ $incident->assigned_to }}</td>
+                <td>{{ $incident->description }}</td>
+                
                 <!-- Add other fields as needed -->
                 <td>
                     <form action="{{ route('incidents.destroy', $incident->id) }}" method="POST">
@@ -37,9 +52,14 @@
                 </td>
             </tr>
         @empty
-            <tr>
-                <td colspan="4">No incidents created yet.</td>
-            </tr>
+            
+               <p>No incidents created yet.</p> 
+            
         @endforelse
+
+
     </table>
+    </div>
+</div>
+   
 @endsection

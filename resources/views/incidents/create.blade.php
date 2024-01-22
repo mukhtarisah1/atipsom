@@ -36,7 +36,7 @@
     <div id="base-style" class="card p-3">
         <div class="card-body">
             <h3 class="card-title">Create New Incident</h3>
-
+            
             <form action="{{ route('incidents.store') }}" class="row g-3" method="POST">
                 @csrf
                 

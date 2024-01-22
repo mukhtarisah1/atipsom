@@ -13,7 +13,7 @@
             <div class="col">
                 <!-- .metric -->
                 <a href="/traffic-in-person" class="metric metric-bordered align-items-center">
-                <h2 class="metric-label"> Manage Trafficking </h2>
+                <h2 class="metric-label"> All Incidents </h2>
                 <p class="metric-value h3">
                     <sub><i class="oi oi-people"></i></sub> <span class="value">8</span>
                 </p>
@@ -23,7 +23,7 @@
             <div class="col">
                 <!-- .metric -->
                 <a href="/facilitators" class="metric metric-bordered align-items-center">
-                <h2 class="metric-label"> Manage Facilitators </h2>
+                <h2 class="metric-label"> Resolved Incidents </h2>
                 <p class="metric-value h3">
                     <sub><i class="oi oi-fork"></i></sub> <span class="value">12</span>
                 </p>
@@ -33,7 +33,7 @@
             <div class="col">
                 <!-- .metric -->
                 <a href="/info-soms" class="metric metric-bordered align-items-center">
-                <h2 class="metric-label"> Manage Shelters </h2>
+                <h2 class="metric-label"> Closed Incidents </h2>
                 <p class="metric-value h3">
                     <sub><i class="fa fa-tasks"></i></sub> <span class="value">64</span>
                 </p>
@@ -44,7 +44,7 @@
         <div class="col-lg-3">
             <!-- .metric -->
             <a href="#" class="metric metric-bordered align-items-center">
-                <h2 class="metric-label"> Requests </h2>
+                <h2 class="metric-label"> on going </h2>
                 <p class="metric-value h3">
                     <sub><i class="fa fa-tasks"></i></sub> <span class="value">24</span>
                 </p>
