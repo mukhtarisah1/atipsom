@@ -12,7 +12,7 @@ class IncidentController extends Controller
     public function index()
     {
         $incidents = Incident::all();
-        return view('incidents.index', compact('incidents'));
+        return view('incidents.index', compact('incidents')); 
     }
 
     // Show the form for creating a new resource.
@@ -89,5 +89,12 @@ class IncidentController extends Controller
 
         return redirect()->route('incidents.index')
                          ->with('success','Incident deleted successfully');
+    }
+
+    public function assigned(){
+        $email = auth()->user()->email;
+        dd($email);
+        $incidents = Incident::where('email', $email )->get();
+        return view('incidents.assigned', compact($incidents));
     }
 }

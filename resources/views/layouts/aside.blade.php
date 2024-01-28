@@ -25,7 +25,7 @@
                       <a href="incidents/create" class="menu-link">Create New</a>
                     </li>
                     <li class="menu-item">
-                      <a href="incidents" class="menu-link">Assigned to me</a>
+                      <a href="/incidents/assigned" class="menu-link">Assigned to me</a>
                     </li>
                     <li class="menu-item">
                       <a href="incidents" class="menu-link">Open</a>
