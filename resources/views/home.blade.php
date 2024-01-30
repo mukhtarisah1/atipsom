@@ -44,15 +44,19 @@
         <div class="col-lg-3">
             <!-- .metric -->
             <a href="#" class="metric metric-bordered align-items-center">
-                <h2 class="metric-label"> on going </h2>
+            <div class="metric-badge">
+                          <span class="badge badge-lg badge-success"><span class="oi oi-media-record pulse mr-1"></span> ONGOING TASKS</span>
+            </div>
                 <p class="metric-value h3">
                     <sub><i class="fa fa-tasks"></i></sub> <span class="value">24</span>
                 </p>
                 </a>  <!-- /.metric -->
         </div><!-- /metric column -->
         </div><!-- /metric row -->
+
     </div><!-- /.section-block -->
     <!-- grid row -->
+    
     
     
     

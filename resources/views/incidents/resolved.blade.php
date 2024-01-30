@@ -17,7 +17,7 @@
     <table class="table table-striped table-hover table-bordered">
         <tr>
             <th>No</th>
-            <th>Number</th>
+            <th>Ref Number</th>
             <th>Caller Name</th>
             <th>Category</th>
             <th>Opened</th>

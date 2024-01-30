@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('number');
             $table->string('caller_name');
             $table->string('category');
-            $table->timestamp("opened");
-            $table->string('closed');
+            $table->date("opened");
+            $table->date('closed');
             $table->string('priority');
             $table->string('state');
             $table->string('description');
