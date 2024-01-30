@@ -23,6 +23,10 @@ use App\Http\Controllers\IncidentController;
 
 Auth::routes();
 
+Route::get('/', function () {
+    return view('auth.login');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
@@ -31,6 +35,10 @@ Route::get('/incidents', [IncidentController::class, 'index'])->name('incidents.
 Route::post('/incidents', [IncidentController::class, 'store'])->name('incidents.store');
 Route::get('/incidents/create', [IncidentController::class, 'create'])->name('incidents.create');
 Route::get('/incidents/assigned', [IncidentController::class, 'assigned'])->name('incidents.assigned');
+Route::get('/incidents/open', [IncidentController::class, 'open'])->name('incidents.open');
+Route::get('/incidents/resolved', [IncidentController::class, 'resolved'])->name('incidents.resolved');
+Route::get('/incidents/unassigned', [IncidentController::class, 'unassigned'])->name('incidents.unassigned');
+
 Route::get('/incidents/{incident}', [IncidentController::class, 'show'])->name('incidents.show');
 Route::put('/incidents/{incident}', [IncidentController::class, 'update'])->name('incidents.update');
 Route::delete('/incidents/{incident}', [IncidentController::class, 'destroy'])->name('incidents.destroy');
@@ -38,6 +46,3 @@ Route::get('/incidents/{incident}/edit', [IncidentController::class, 'edit'])->n
 
 
 
-Route::get('/', function () {
-    return view('auth.login');
-});

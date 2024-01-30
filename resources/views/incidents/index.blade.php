@@ -31,7 +31,7 @@
         @forelse ($incidents as $incident)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $incident->number }}</td>
+                <td><a href="{{ route('incidents.show', $incident->id) }}">{{ $incident->number }}</a></td>
                 <td>{{ $incident->caller_name }}</td>
                 <td>{{ $incident->category }}</td>
                 <td>{{ $incident->opened }}</td>
@@ -43,7 +43,7 @@
                 <!-- Add other fields as needed -->
                 <td>
                     <form action="{{ route('incidents.destroy', $incident->id) }}" method="POST">
-                        <a href="{{ route('incidents.show', $incident->id) }}">Show</a>
+                        
                         <a href="{{ route('incidents.edit', $incident->id) }}"><i class="fa fa-pencil-alt"></i> <span class="sr-only">Edit</span></a>
                         @csrf
                         @method('DELETE')

@@ -22,19 +22,19 @@
                   <a href="#" class="menu-link"><span class="menu-icon oi oi-wrench"></span> <span class="menu-text">Incidents</span></a> <!-- child menu -->
                   <ul class="menu">
                     <li class="menu-item">
-                      <a href="incidents/create" class="menu-link">Create New</a>
+                      <a href="{{ url('incidents/create')}}" class="menu-link">Create New</a>
                     </li>
                     <li class="menu-item">
-                      <a href="/incidents/assigned" class="menu-link">Assigned to me</a>
+                      <a href="{{ url('incidents/assigned') }}" class="menu-link">Assigned to me</a>
                     </li>
                     <li class="menu-item">
-                      <a href="incidents" class="menu-link">Open</a>
+                      <a href="{{ url('incidents/open') }}" class="menu-link">Open</a>
                     </li>
                     <li class="menu-item">
-                      <a href="incidents" class="menu-link">Open Unassigned </a>
+                      <a href="{{ url('incidents/unassigned') }}" class="menu-link">Open Unassigned </a>
                     </li>
                     <li class="menu-item">
-                      <a href="incidents" class="menu-link">Resolved</a>
+                      <a href="{{ url('incidents/resolved') }}" class="menu-link">Resolved</a>
                     </li>
                     
                   </ul><!-- /child menu -->
