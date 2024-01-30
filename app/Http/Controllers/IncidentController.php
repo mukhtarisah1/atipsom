@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Incident;
 use App\Models\User;
+use Illuminate\Support\Str;
 use NunoMaduro\Collision\Adapters\Phpunit\State;
 
 class IncidentController extends Controller
@@ -13,13 +14,16 @@ class IncidentController extends Controller
     public function index()
     {
         $incidents = Incident::all();
+        
         return view('incidents.index', compact('incidents')); 
     }
 
     // Show the form for creating a new resource.
     public function create()
     {   $users = User::all();
-        return view('incidents.create', compact('users'));
+        $referenceNumber = 'INC-' . Str::upper(Str::random(8));
+        //dd($referenceNumber);
+        return view('incidents.create', compact('users','referenceNumber'));
     }
 
     // Store a newly created resource in storage.

@@ -43,7 +43,7 @@
                 <div class="col-md-6 mb-3">
                     <label for="number" class="form-label">Number</label>
                     <i title="Required">*</i>
-                    <input type="number" class="form-control" name="number" id="inputEmail4" value="{{ old('number') }}">
+                    <input type="text" class="form-control" name="number" id="inputEmail4" value="{{ old('number', $referenceNumber) }}" readonly>
                     <p style="color:red">@error('number') {{$message}} @endError</p>
                 </div>
                 <div class="col-md-6 mb-3">
