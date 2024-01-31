@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ResolveTask;
 use Illuminate\Http\Request;
 use App\Models\Incident;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use NunoMaduro\Collision\Adapters\Phpunit\State;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 class IncidentController extends Controller
 {
@@ -43,9 +47,11 @@ class IncidentController extends Controller
             'location' => 'required|string',
         ]);
         $user = User::where('email', $request->assigned_to)->first();
+        $email =$request->assigned_to;
         //dd($user);
         $data['user_id'] =$user->id;
         Incident::create($data);
+        Mail::to($email)->send(new ResolveTask);
 
         return redirect()->route('incidents.index')
                          ->with('success','Incident created successfully.');
