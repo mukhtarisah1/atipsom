@@ -52,8 +52,8 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
-            'domain' => 'sandboxde7d80fd856847d2b38d36ab74175fee.mailgun.org',
-            'secret' => 'your-mailgun-key',
+            'domain' => env('MAILGUN_DOMAIN'),
+            'secret' => env('MAILGUN_SECRET'),
             // 'client' => [
             //     'timeout' => 5,
             // ],

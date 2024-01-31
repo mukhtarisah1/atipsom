@@ -47,11 +47,13 @@ class IncidentController extends Controller
             'location' => 'required|string',
         ]);
         $user = User::where('email', $request->assigned_to)->first();
+        //dd($user);
         $email =$request->assigned_to;
         //dd($user);
         $data['user_id'] =$user->id;
-        Incident::create($data);
         Mail::to($email)->send(new ResolveTask);
+        Incident::create($data);
+        
 
         return redirect()->route('incidents.index')
                          ->with('success','Incident created successfully.');
