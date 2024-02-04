@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- End Required meta tags -->
     <!-- Begin SEO tag -->
-    <title> Sign In | Atipsom </title>
+    <title> Sign In | Incident Management Solution </title>
     <meta property="og:title" content="Sign In">
     <meta name="author" content="content oasis">
     <meta property="og:locale" content="en_US">

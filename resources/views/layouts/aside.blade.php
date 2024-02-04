@@ -10,7 +10,7 @@
                   <a href="#" class="menu-link"><span class="menu-icon far fa-file"></span> <span class="menu-text">Service Desk</span> </a> <!-- child menu -->
                   <ul class="menu">
                     <li class="menu-item">
-                      <a href="incidents" class="menu-link">Incidents</a>
+                      <a href="{{ route('incidents.index') }}" class="menu-link">Incidents</a>
                     </li>
                     
                     

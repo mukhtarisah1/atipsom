@@ -63,4 +63,3 @@
            
           
 @endsection
-<a href="traffic-in-person/create" class="btn btn-primary"> New traffic in person </a>

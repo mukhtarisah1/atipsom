@@ -50,6 +50,9 @@
         
       </header><!-- form -->
       <div class= "form-div">
+        <div class="d-flex mb-3" >
+        <img class="img-fluid" src="{{url('assets/incident.png')}}" alt="incident management" height="200" width="">
+        </div>
         <form class="" method="POST" action="{{ route('login') }}">
           @csrf
           <!-- .form-group -->
@@ -88,7 +91,7 @@
           </div><!-- /.form-group -->
           <!-- recovery links -->
           <div class="text-center pt-3">
-            <a href="auth-recovery-username.html" class="link">Forgot Username?</a> <span class="mx-2">·</span> <a href="auth-recovery-password.html" class="link">Forgot Password?</a>
+            <a href="/password/reset" class="link">Forgot Username?</a> <span class="mx-2">·</span> <a href="/password/reset" class="link">Forgot Password?</a>
           </div><!-- /recovery links -->
         </form><!-- /.auth-form -->
        
