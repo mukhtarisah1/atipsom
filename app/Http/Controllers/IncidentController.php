@@ -22,6 +22,7 @@ class IncidentController extends Controller
     public function index()
     {
         $incidents = Incident::all();
+         
         
         return view('incidents.index', compact('incidents')); 
     }
@@ -127,5 +128,15 @@ class IncidentController extends Controller
     public function unassigned(){
         $incidents = Incident::where('assigned_to', null)->get();
         return view('incidents.open', compact('incidents'));
+    }
+
+    public function barChart()
+    {
+        // Replace this with your actual data retrieval logic
+        $data = [
+            'labels' => ['January', 'February', 'March', 'April', 'May'],
+            'data' => [65, 59, 80, 81, 56],
+        ];
+        return view('bar-chart', compact('data'));
     }
 }
