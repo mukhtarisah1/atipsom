@@ -2,6 +2,9 @@
 @section('title', 'Dashboard')
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <h3>DashBoard</h3>
+    
     <!-- .section-block -->
     <div class="section-block">
     <hr/>
