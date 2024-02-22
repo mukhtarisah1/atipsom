@@ -212,6 +212,7 @@
 
         </table>
      
+this is home 
 
     </div><!-- /.section-block -->
     <!-- grid row -->
