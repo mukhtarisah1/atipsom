@@ -12,7 +12,7 @@ class FacilitatorsController extends Controller
         $facilitators = Facilitator::all();
         return view('facilitator.index', compact('facilitators'));
     }
-    //facilitators
+    
     public function create()
     {
         return view('facilitator.create');
