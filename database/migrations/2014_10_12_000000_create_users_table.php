@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Http\Model\incident;
 
 return new class extends Migration
 {
@@ -16,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('surname');
             $table->string('given_name');
-            $table->string('agency_name');
-            $table->string('access_level');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -34,7 +31,5 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 
-    public function incident(){
-        $this->hasOne(incident::class);
-    }
+    
 };

@@ -48,21 +48,8 @@
                     <li class="menu-item">
                       <a href="{{ route('register')}}" class="menu-link">Create New User</a>
                     </li>
-                    <li class="menu-item">
-                      <a href="{{ route('incidents.assigned') }}" class="menu-link">Assigned to me</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="{{ route('incidents.open') }}" class="menu-link">Open</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="{{ route('incidents.unassigned') }}" class="menu-link">Open Unassigned </a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="{{ route('incidents.resolved') }}" class="menu-link">Resolved</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="{{ route('incidents.resolved') }}" class="menu-link">Resolved</a>
-                    </li>
+                    
+                    
                     
                   </ul><!-- /child menu -->
                 </li>
