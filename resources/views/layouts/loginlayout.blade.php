@@ -11,8 +11,8 @@
     <meta property="og:title" content="Sign In">
     <meta name="author" content="content oasis">
     <meta property="og:locale" content="en_US">
-    <meta name="description" content="Atipsom software">
-    <meta property="og:description" content="Atipsom software">
+    <meta name="description" content="Incident management system">
+    <meta property="og:description" content="Incident management software">
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
     <meta property="og:site_name" content="Atipsom - software ">
@@ -80,5 +80,4 @@
     </script>
   </body>
 
-<!-- Mirrored from uselooper.com/auth-signin-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 Oct 2023 17:13:30 GMT -->
 </html>

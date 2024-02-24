@@ -7,7 +7,7 @@
             <button class="hamburger hamburger-squeeze mr-2" type="button" data-toggle="aside-menu" aria-label="toggle aside menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button> <!-- /toggle aside menu -->
             <a href="index.html">
               
-             <img class="rounded" src="{{url('assets/banner.jpeg')}}" alt="" height="50" width="150">
+             <img class="rounded" src="{{url('assets/nhis.jpg')}}" alt="" height="40" width="100">
             
             
             </a>
