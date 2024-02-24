@@ -203,18 +203,10 @@
                             <p>No incidents created yet.</p>                            
                         @endforelse
 
-                    </table>
-                    
-                         
-                    
+                    </table>              
                     
         </div><!-- /.card-body -->
         </div>
-        
-        
-        
-       
-
     </div><!-- /.section-block -->
     <!-- grid row -->
 @endsection
