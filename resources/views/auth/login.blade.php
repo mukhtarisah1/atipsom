@@ -92,11 +92,13 @@
             </div>
           </div><!-- /.form-group -->
           <!-- recovery links -->
-          <div class="text-center pt-3">
+          <div class="text-center pt-1">
              <a href="/password/reset" class="link">Forgot Password?</a>
           </div><!-- /recovery links -->
         </form><!-- /.auth-form -->
-       
+       <div class="text-center">
+          <img class="rounded" src="{{url('assets/nhis.jpg')}}" alt="" height="40" width="100">
+       </div>
       </div>
       <!-- copyright -->
       
