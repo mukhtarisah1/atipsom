@@ -16,7 +16,7 @@ class ResolveTask extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(public string $title, public string $body)
     {
         //
     }
@@ -37,7 +37,11 @@ class ResolveTask extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.resolve',
+            view: 'emails.resolve',
+            with:[
+                'title' => $this->title,
+                'body' => $this->body,
+            ],
         );
     }
 

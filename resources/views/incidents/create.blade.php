@@ -37,7 +37,7 @@
         <div class="card-body">
             <h3 class="card-title">Create New Incident</h3>
             
-            <form action="{{ route('incidents.store') }}" class="row g-3" method="POST">
+            <form action="{{ route('incidents.store') }}" class="row g-3" method="POST" enctype="multipart/form-data">
                 @csrf
                 
                 <div class="col-md-6 mb-3">
@@ -62,8 +62,7 @@
                 <div class="col-md-6 mb-3">
                 
                     <label for="Closed" class="form-label">Closed</label>
-                    <i title="Required">*</i>
-                    <input type="date" class="form-control" name="closed" id="inputEmail4" value="{{ old('closed') }}">
+                    <input type="date" class="form-control" name="closed" id="inputEmail4" placeholder="Not available" disabled >
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="category" class="form-label">Category</label>
@@ -95,8 +94,6 @@
                         <option value="New"> New </option>
                         <option value="In progress"> In Progress </option>
                         <option value="On Hold"> On Hold </option>
-                        <option value="Resolved"> Resolved </option>
-                        <option value="Closed"> Closed </option>
                         <option value="Canceled"> Canceled </option>
                     </select>
                 </div>
@@ -110,15 +107,24 @@
                         @endforeach
                     </select>
                 </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="tf3">File input</label>
+                    <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="tf3" multiple="" name="file" style="cursor:pointer" > 
+                    <small id="fileHelp" class="form-text text-muted">Accepted formats: PDF, DOCX, JPEG, PNG, JPG, GIF . Maximum file size: 2MB.</small>
+                    <label class="custom-file-label" for="tf3">Choose file</label>
+                    </div>
+                </div>
+
                 <div class="col-md-6 mb-3">
                     <label for="number" class="form-label">Location</label>
                     <i title="Required">*</i>
                     <input type="text" class="form-control" name="location" id="inputEmail4" value="{{ old('location') }}">
                 </div>
+                
                
                 <div class="col-12 mb-3">
                     <label for="inputAddress" class="form-label">Description</label>
-                    <i title="Required">*</i>
                     <textarea class="form-control" id="lbl3" rows="3" name="description" placeholder="Optional label"> </textarea>
                 </div>
 

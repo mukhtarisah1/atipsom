@@ -44,7 +44,8 @@
                 <div class="col-md-6 mb-3">
                     <label for="number" class="form-label">Number</label>
                     <i title="Required">*</i>
-                    <input type="number" class="form-control" name="number" id="inputEmail4" value="{{ old('number', $incident->number) }}">
+                    <input type="text" class="form-control" name="number" id="inputEmail4" value="{{ $incident->number }}">
+                    
                     <p style="color:red">@error('number') {{$message}} @endError</p>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -113,6 +114,16 @@
                         @endforeach
                     </select>
                 </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="tf3">File input</label>
+                    <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="tf3" multiple="" value="{{ $incident->file }}" name="file" style="cursor:pointer" > 
+                    <small id="fileHelp" class="form-text text-muted">Accepted formats: PDF, DOCX, JPEG, PNG, JPG, GIF . Maximum file size: 2MB.</small>
+                    <label class="custom-file-label" for="tf3">Choose file</label>
+                    {{ $incident->file }}
+                    </div>
+                </div>
+
                 <div class="col-md-6 mb-3">
                     <label for="number" class="form-label">Location</label>
                     <i title="Required">*</i>
@@ -122,9 +133,7 @@
                 <div class="col-12 mb-3">
                     <label for="inputAddress" class="form-label">Description</label>
                     <i title="Required">*</i>
-                    <textarea class="form-control" id="lbl3" rows="3" name="description" placeholder="Optional label" required>
-                    {{ old('description', optional($incident)->description) }} 
-                    </textarea>
+                    <textarea class="form-control" id="lbl3" rows="3" name="description" placeholder="Optional label" >{{$incident->description }}</textarea>
                 </div>
 
                 <div class="col-12 mb-3">

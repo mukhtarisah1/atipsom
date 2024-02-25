@@ -31,7 +31,7 @@
         @forelse ($incidents as $incident)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td><a href="{{ route('incidents.show', $incident->id) }}">{{ $incident->number }}</a></td>
+                <td><a href="#">{{ $incident->number }}</a></td>
                 <td>{{ $incident->caller_name }}</td>
                 <td>{{ $incident->category }}</td>
                 <td>{{ $incident->opened }}</td>

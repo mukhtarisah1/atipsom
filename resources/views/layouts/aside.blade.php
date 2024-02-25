@@ -31,22 +31,21 @@
                       <a href="{{ route('incidents.open') }}" class="menu-link">Open</a>
                     </li>
                     <li class="menu-item">
-                      <a href="{{ route('incidents.unassigned') }}" class="menu-link">Open Unassigned </a>
+                      <a href="{{ route('incidents.unassigned') }}" class="menu-link">Unassigned </a>
                     </li>
                     <li class="menu-item">
                       <a href="{{ route('incidents.resolved') }}" class="menu-link">Resolved</a>
                     </li>
-                    <li class="menu-item">
-                      <a href="{{ route('incidents.resolved') }}" class="menu-link">Resolved</a>
-                    </li>
+                   
                     
                   </ul><!-- /child menu -->
                 </li>
                 <li class="menu-item has-child">
-                  <a href="#" class="menu-link"><span class="menu-icon oi oi-wrench"></span> <span class="menu-text">User Management</span></a> <!-- child menu -->
+                  <a href="#" class="menu-link"><span class="menu-icon oi oi-person"></span> <span class="menu-text">User Management</span></a> <!-- child menu -->
                   <ul class="menu">
                     <li class="menu-item">
                       <a href="{{ route('register')}}" class="menu-link">Create New User</a>
+                      <a href="{{ route('register')}}" class="menu-link">View Users</a>
                     </li>
                     
                     
