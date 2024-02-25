@@ -24,7 +24,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         // Get all incidents
         $incidents = Incident::all();
@@ -68,7 +68,24 @@ class HomeController extends Controller
             'onGoing' => $onGoing
         ];
         //dd($cards);
-        $incidents = Incident::all();
-        return view('home', compact('data','data1', 'cards', 'incidents'));
+                //$searchIncidents = Incident::all();
+            $query = Incident::query(); 
+            $searchableFields = ['caller_name', 'state', 'number']; 
+            foreach ($searchableFields as $field) {
+                $value = $request->input('name');
+                //dd($value);
+                if ($value){
+                    // Split the input by commas and trim whitespace
+                    $values = array_map('trim', explode(',', $value));                    
+                    $query->orWhere(function ($query) use ($field, $values) {
+                        foreach ($values as $singleValue) {
+                            $query->orWhere($field, 'like', '%' . $singleValue . '%');
+                        }
+                    });
+                }
+            }   
+                $incidentSearch = $query->get();
+        
+        return view('home', compact('data','data1', 'cards', 'incidents', 'incidentSearch'));
     }
 }

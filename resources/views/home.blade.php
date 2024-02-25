@@ -151,7 +151,7 @@
                                             <span class="input-group-text"><span class="oi oi-magnifying-glass"></span></span>
                                         </div>
                                         
-                                        <input type="text" class="form-control" placeholder="Search record">
+                                        <input type="text" class="form-control" placeholder="Search record by caller name,  or priority, or Ref_number" name="name">
                                     
                                     </div>
                                     <div class="input-group-prepend">
@@ -176,7 +176,7 @@
                             <!-- Add other fields as needed -->
                             <th>Actions</th>
                         </tr>
-                        @forelse ($incidents as $incident)
+                        @forelse ($incidentSearch as $incident)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td><a href="{{ route('incidents.show', $incident->id) }}">{{ $incident->number }}</a></td>

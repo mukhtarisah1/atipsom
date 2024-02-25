@@ -10,10 +10,8 @@ class InfoSomController extends Controller
 {
     public function index(Request $request)
     {
-        $query = InfoSom::query(); // Replace 'User' with the appropriate model name
-
-    $searchableFields = ['namager_name', 'email', 'facility']; // Add more fields as needed
-
+        $query = InfoSom::query(); 
+    $searchableFields = ['namager_name', 'email', 'facility']; 
     foreach ($searchableFields as $field) {
         $value = $request->input('name');
         //dd($value);
