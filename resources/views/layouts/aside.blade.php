@@ -45,7 +45,7 @@
                   <ul class="menu">
                     <li class="menu-item">
                       <a href="{{ route('register')}}" class="menu-link">Create New User</a>
-                      <a href="{{ route('register')}}" class="menu-link">View Users</a>
+                      <a href="/users" class="menu-link">View Users</a>
                     </li>
                     
                     

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Incident;
 use Carbon\Carbon;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -87,5 +88,15 @@ class HomeController extends Controller
                 $incidentSearch = $query->get();
         
         return view('home', compact('data','data1', 'cards', 'incidents', 'incidentSearch'));
+    }
+    public function users(){
+        $users = User::all();
+        //dd($users);
+        return view('Users.user', compact('users'));
+    }
+    public function destroy(User $user){
+        $user->delete();
+        return redirect()->route('index.users')
+        ->with('success','Incident deleted successfully');
     }
 }

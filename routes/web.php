@@ -28,6 +28,9 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('index.users');
+Route::get('/delete-user/{user}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('delete.user');
+
 
 
 // Incidents Routes

@@ -8,7 +8,7 @@
 
     @if ($message = Session::get('success'))
         <div>
-            <p>{{ $message }}</p>
+            <p class="alert alert-success">{{ $message }}</p>
         </div>
     @endif
 <div class="card">
