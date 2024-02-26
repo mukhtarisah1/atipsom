@@ -26,12 +26,10 @@ Auth::routes();
 Route::get('/', function () {
     return view('auth.login');
 });
-
+Route::middleware( ['auth'])->group(function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('index.users');
-Route::get('/delete-user/{user}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('delete.user');
-
-
+Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('index.users')->middleware('isAdmin');
+Route::delete('/delete-user/{user}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('delete.user')->middleware('isAdmin');
 
 // Incidents Routes
 Route::get('/incidents', [IncidentController::class, 'index'])->name('incidents.index');
@@ -46,6 +44,8 @@ Route::get('/incidents/{incident}', [IncidentController::class, 'show'])->name('
 Route::put('/incidents/{incident}', [IncidentController::class, 'update'])->name('incidents.update');
 Route::delete('/incidents/{incident}', [IncidentController::class, 'destroy'])->name('incidents.destroy');
 Route::get('/incidents/{incident}/edit', [IncidentController::class, 'edit'])->name('incidents.edit');
+});
+
 
 
 

@@ -40,16 +40,18 @@
                     
                   </ul><!-- /child menu -->
                 </li>
-                <li class="menu-item has-child">
-                  <a href="#" class="menu-link"><span class="menu-icon oi oi-person"></span> <span class="menu-text">User Management</span></a> <!-- child menu -->
-                  <ul class="menu">
-                    <li class="menu-item">
-                      <a href="{{ route('register')}}" class="menu-link">Create New User</a>
-                      <a href="/users" class="menu-link">View Users</a>
-                    </li>
-                    
-                    
-                    
-                  </ul><!-- /child menu -->
-                </li>
+                @if(auth()->user()->role == 1)
+                  <li class="menu-item has-child">
+                    <a href="#" class="menu-link"><span class="menu-icon oi oi-person"></span> <span class="menu-text">User Management</span></a> <!-- child menu -->
+                    <ul class="menu">
+                      <li class="menu-item">
+                        <a href="{{ route('register')}}" class="menu-link">Create New User</a>
+                        <a href="/users" class="menu-link">View Users</a>
+                      </li>
+                      
+                      
+                      
+                    </ul><!-- /child menu -->
+                  </li>
+                @endif
 </nav>

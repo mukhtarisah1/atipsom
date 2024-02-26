@@ -38,7 +38,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','isAdmin']);
     }
 
     /**
@@ -55,6 +55,7 @@ class RegisterController extends Controller
             'given_name' => ['required', 'string', 'max:50'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'role' => ['nullable', 'int']
         ]);
     }
 
@@ -71,6 +72,7 @@ class RegisterController extends Controller
             'surname' => $data['surname'],
             'given_name' => $data['given_name'],
             'email' => $data['email'],
+            'role' => $data['role'],
             'password' => Hash::make($data['password']),
         ]);
     }

@@ -97,6 +97,6 @@ class HomeController extends Controller
     public function destroy(User $user){
         $user->delete();
         return redirect()->route('index.users')
-        ->with('success','Incident deleted successfully');
+        ->with('success','User deleted successfully');
     }
 }

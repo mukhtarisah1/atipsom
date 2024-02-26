@@ -24,6 +24,7 @@ class User extends Authenticatable
         'password',
         'agency_name',
         'access_level',
+        'role',
     ];
 
     /**

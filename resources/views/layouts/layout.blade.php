@@ -40,6 +40,37 @@
       // add loading class to html immediately
       document.querySelector('html').classList.add('loading');
     </script><!-- END THEME STYLES -->
+    <style>
+    .incident-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .incident-details {
+        margin-top: 20px;
+    }
+
+    .incident-info {
+        margin-bottom: 10px;
+    }
+
+    .back-to-list {
+        margin-top: 20px;
+    }
+
+    .back-to-list a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3490dc;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
   </head>
   <body>
     <!-- .app -->

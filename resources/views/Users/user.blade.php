@@ -13,7 +13,7 @@
     @endif
 <div class="card">
     <div class="card-body">
-    <a href="/register"><h6>Create New Incident</h6></a>
+    <a href="/register"><h6>Create New User</h6></a>
     <table class="table table-striped table-hover table-responsive">
         <tr>
             <th>No</th>
@@ -37,9 +37,9 @@
                 
                 <!-- Add other fields as needed -->
                 <td>
-                    <form action="" method="POST">
+                    <form action="{{route('delete.user', $user->id)}}" method="POST">
                         
-                        <a href=""><i class="fa fa-pencil-alt"></i> <span class="sr-only">Edit</span></a>
+                        
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-sm btn-icon btn-secondary" onclick="return confirm('Are you sure you want to delete this record?')" type="submit"><i class="far fa-trash-alt"></i> <span class="sr-only">Remove</span></button>
