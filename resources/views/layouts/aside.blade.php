@@ -42,7 +42,7 @@
                     
                   </ul><!-- /child menu -->
                 </li>
-                @if(auth()->user()->is_admin == 1)
+                @if(auth()->user()->role == 1)
                   <li class="menu-item has-child">
                     <a href="#" class="menu-link"><span class="menu-icon oi oi-person"></span> <span class="menu-text">User Management</span></a> <!-- child menu -->
                     <ul class="menu">
