@@ -3,13 +3,10 @@
 
 @section('content')
     <div class="incident-container">
-        <h2>View Incident</h2>
+        <h4 class="text-success border-bottom">View Incident</h4>
 
         <div class="incident-details">
-            <div class="incident-info">
-                <strong>User ID:</strong>
-                {{ $incident->user_id }}
-            </div>
+            
             <div class="incident-info">
                 <strong>Number:</strong>
                 {{ $incident->number }}
@@ -53,8 +50,8 @@
             </div>
         </div>
 
-        <div class="back-to-list">
-            <a href="{{ route('incidents.index') }}">Back to List</a>
+        <div >
+            <a href="{{ route('incidents.index') }}" class="btn btn-success">Back to List</a>
         </div>
     </div>
 @endsection
