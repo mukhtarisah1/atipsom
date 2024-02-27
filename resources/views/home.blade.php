@@ -15,7 +15,7 @@
                     <!-- metric column -->
                     <div class="col">
                         <!-- .metric -->
-                        <a href="/traffic-in-person" class="metric metric-bordered align-items-center">
+                        <a href="{{route('incidents.index')}}" class="metric metric-bordered align-items-center">
                             <h2 class="metric-label"> All Incidents </h2>
                             <p class="metric-value h3">
                                 <sub><i class="oi oi-people"></i></sub> <span class="value">{{$cards['allIncidents']}}</span>
@@ -25,7 +25,7 @@
                     <!-- metric column -->
                     <div class="col">
                         <!-- .metric -->
-                        <a href="/facilitators" class="metric metric-bordered align-items-center">
+                        <a href="{{route('incidents.resolved')}}" class="metric metric-bordered align-items-center">
                             <h2 class="metric-label"> Resolved Incidents </h2>
                             <p class="metric-value h3">
                                 <sub><i class="oi oi-fork"></i></sub> <span class="value">{{$cards['resolved']}}</span>
@@ -35,7 +35,7 @@
                     <!-- metric column -->
                     <div class="col">
                         <!-- .metric -->
-                        <a href="/info-soms" class="metric metric-bordered align-items-center">
+                        <a href="{{route('incidents.closed')}}" class="metric metric-bordered align-items-center">
                             <h2 class="metric-label"> Closed Incidents </h2>
                             <p class="metric-value h3">
                                 <sub><i class="fa fa-tasks"></i></sub> <span class="value">{{$cards['closed']}}</span>
@@ -46,7 +46,7 @@
             </div><!-- metric column -->
             <div class="col-lg-3">
                 <!-- .metric -->
-                <a href="#" class="metric metric-bordered align-items-center">
+                <a href="{{route('incidents.open')}}" class="metric metric-bordered align-items-center">
                     <div class="metric-badge">
                         <span class="badge badge-lg badge-success"><span class="oi oi-media-record pulse mr-1"></span> ONGOING TASKS</span>
                     </div>
