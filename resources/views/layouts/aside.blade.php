@@ -55,9 +55,17 @@
                       
                     </ul><!-- /child menu -->
                   </li>
-                  <li class="menu-item">
-                      <a href="{{ route('incidents.reports') }}" class="menu-link">Report Generation</a>
+                  <li class="menu-item has-child">
+                    <a href="#" class="menu-link"><span class="menu-icon fa fa-id-card"></span> <span class="menu-text">Reports</span></a> <!-- child menu -->
+                    <ul class="menu">
+                      <li class="menu-item">
+                      <a href="{{ route('incidents.reports') }}" class="menu-link">Generate Report</a>
+                        
+                      </li>
+                      
+                    </ul><!-- /child menu -->
                   </li>
+                  
                 @endif
                
 </nav>
