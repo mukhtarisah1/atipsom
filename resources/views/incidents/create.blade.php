@@ -110,9 +110,10 @@
                 <div class="form-group col-md-6 mb-3">
                     <label for="tf3">File input</label>
                     <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="tf3" multiple="" name="file" style="cursor:pointer" > 
-                    <small id="fileHelp" class="form-text text-muted">Accepted formats: PDF, DOCX, JPEG, PNG, JPG, GIF . Maximum file size: 2MB.</small>
-                    <label class="custom-file-label" for="tf3">Choose file</label>
+                        <input type="file" class="custom-file-input" id="tf3" multiple="" name="file" style="cursor:pointer" > 
+                        
+                        <label class="custom-file-label" for="tf3">Choose file</label>
+                        <small id="fileHelp" class="form-text text-muted">Accepted formats: PDF, DOCX, JPEG, PNG, JPG, GIF . Maximum file size: 2MB.</small>
                     </div>
                 </div>
 
