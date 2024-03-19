@@ -34,18 +34,20 @@
                   <div class="dropdown-arrow d-lg-none" x-arrow=""></div>
                   <div class="dropdown-arrow ml-3 d-none d-lg-block"></div>
                   
-                  <h6 class="dropdown-header d-none d-md-block d-lg-none"> Beni Arisandi </h6><a class="dropdown-item" href="/home"><span class="dropdown-icon oi oi-person"></span> Profile</a> <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"><span class="dropdown-icon oi oi-account-logout"></span>
-                                        {{ __('Logout') }}
-                                    </a>
+                  
+                      <a class="dropdown-item" href="/home"><span class="dropdown-icon oi oi-person"></span> Home</a> 
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();"><span class="dropdown-icon oi oi-account-logout"></span>
+                          {{ __('Logout') }}
+                      </a>
                   
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                          @csrf
+                      </form>
                   
-                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Help Center</a> <a class="dropdown-item" href="#">Ask Forum</a> <a class="dropdown-item" href="#">Keyboard Shortcuts</a>
+                  
                 
                   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 </div><!-- /.dropdown-menu -->
