@@ -83,7 +83,7 @@
                         <option value="High"> 1-High </option>
                         <option value="Medium"> 2-Moderate </option>
                         <option value="Low"> 3-low </option>
-                        <option value="4"> 4-Planning </option>
+                        <option value="planning"> 4-Planning </option>
                     </select>
                 </div>
                
